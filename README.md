@@ -13,7 +13,7 @@ npm install
 
 ## 本地运行
 
-http://localhost:8000/welcome [直接进入根目录]
+user: admin pwd: 123456
 
 ```bash
 npm run start          开发环境（Mock接口）
