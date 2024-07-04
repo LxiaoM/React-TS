@@ -20,4 +20,11 @@ declare namespace ServerConfig {
     duration?: number;
     maxCount?: number; // 最但显示数，超过限制时，最早的消息会被自动关闭
   };
+  // 微服务配置信息
+  type MicrosoftApps = [
+    {
+      name: string; // 微服务对应名称
+      entry: string; // 微服务对应地址
+    },
+  ];
 }

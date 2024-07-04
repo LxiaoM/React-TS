@@ -29,48 +29,6 @@ export default [
     component: './Welcome',
   },
   {
-    path: '/welcome',
-    name: 'welcome',
-    icon: 'smile',
-    component: './Welcome',
-  },
-  {
-    path: '/welcome',
-    name: 'welcome',
-    icon: 'smile',
-    component: './Welcome',
-  },
-  {
-    path: '/welcome',
-    name: 'welcome',
-    icon: 'smile',
-    component: './Welcome',
-  },
-  {
-    path: '/welcome',
-    name: 'welcome',
-    icon: 'smile',
-    component: './Welcome',
-  },
-  {
-    path: '/welcome',
-    name: 'welcome',
-    icon: 'smile',
-    component: './Welcome',
-  },
-  {
-    path: '/welcome',
-    name: 'welcome',
-    icon: 'smile',
-    component: './Welcome',
-  },
-  {
-    path: '/welcome',
-    name: 'welcome',
-    icon: 'smile',
-    component: './Welcome',
-  },
-  {
     path: '/admin',
     name: 'admin',
     icon: 'crown',
@@ -94,7 +52,7 @@ export default [
             name: 'sub-page2',
             component: './Admin',
           },
-        ]
+        ],
       },
       {
         name: 'list.table-list',
@@ -109,6 +67,13 @@ export default [
     icon: 'table',
     path: '/list',
     component: './TableList',
+  },
+  // SCP - Product 微服务
+  {
+    name: 'SCP-Product',
+    icon: 'table',
+    path: '/commodityCenter/*',
+    microApp: 'scp-product',
   },
   {
     path: '/',

@@ -1,15 +1,20 @@
-# Oceania Frontend 
+# Oceania Frontend
 
 Oceania 前端框架
+
 # 入门说明
+
 ## 项目初始化
 
 ```bash
-git clone https://gitee.com/oceania-frontend/oceania-front.git
+git clone From gitHub
 npm install
 ```
 
 ## 本地运行
+
+http://localhost:8000/welcome [直接进入根目录]
+
 ```bash
 npm run start          开发环境（Mock接口）
 npm run start:dev      开发环境
@@ -17,15 +22,20 @@ npm run start:test     测试环境
 npm run start:uat      UAT环境
 npm run start:prod     生产环境
 ```
+
 ### 打包项目
+
 ```bash
 npm run build:dev       开发环境
 npm run build:test      测试环境
 npm run build:uat       UAT环境
 npm run build:prod      生产环境
 ```
+
 # 项目标准
+
 ## 目录结构
+
 ```bash
 ├── config                   # umi 配置，包含路由，构建等配置
 │   └── serverConfig         #    -- 不同环境相关配置信息
@@ -51,6 +61,7 @@ npm run build:prod      生产环境
 ```
 
 ## 代码结构
+
 ```bash
 src
 ├── components
@@ -70,7 +81,9 @@ src
     |   └── util.ts    // 这里可以有一些共用方法之类，不做推荐和约束，看业务场景自行做组织
     └── *              // 其它页面组件代码
 ```
+
 ## 代码提交规范
+
 ```bash
     💥 feat: 新功能
     🐛 fix: BUG 修复
@@ -82,8 +95,13 @@ src
 
 官方出处：https://github.com/vuejs/core/blob/main/.github/commit-convention.md
 ```
+
 # 说明文档
+
 ## 框架说明
-[框架说明](https://alidocs.dingtalk.com/i/nodes/Qnp9zOoBVBgQ4z5QfpZvw36vJ1DK0g6l?utm_scene=team_space "框架说明")
+
+[框架说明](https://alidocs.dingtalk.com/i/nodes/Qnp9zOoBVBgQ4z5QfpZvw36vJ1DK0g6l?utm_scene=team_space '框架说明')
+
 ## 框架包说明
-[框架包说明](https://alidocs.dingtalk.com/i/nodes/AR4GpnMqJzjlrLdlIvZenDBoJKe0xjE3?utm_scene=team_space "Node包说明")
+
+[框架包说明](https://alidocs.dingtalk.com/i/nodes/AR4GpnMqJzjlrLdlIvZenDBoJKe0xjE3?utm_scene=team_space 'Node包说明')

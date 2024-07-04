@@ -8,6 +8,7 @@ const Admin: React.FC = () => {
   const intl = useIntl();
   return (
     <PageContainer
+      breadcrumbRender={false}
       content={intl.formatMessage({
         id: 'pages.admin.subPage.title',
         defaultMessage: 'This page can only be viewed by admin',
@@ -28,7 +29,7 @@ const Admin: React.FC = () => {
           }}
         />
         <Typography.Title level={2} style={{ textAlign: 'center' }}>
-          <SmileTwoTone /> Oceania <HeartTwoTone twoToneColor="#eb2f96" /> 大前端 
+          <SmileTwoTone /> Oceania <HeartTwoTone twoToneColor="#eb2f96" /> 大前端
         </Typography.Title>
       </Card>
       <p style={{ textAlign: 'center', marginTop: 24 }}>

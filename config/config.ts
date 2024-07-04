@@ -153,4 +153,8 @@ export default defineConfig({
   },
   esbuildMinifyIIFE: true,
   requestRecord: {},
+  // 微服务相关
+  qiankun: {
+    master: {},
+  },
 });

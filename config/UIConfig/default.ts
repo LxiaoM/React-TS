@@ -17,7 +17,7 @@ const Settings: ProLayoutProps & {
   fixedHeader: false,
   fixSiderbar: true,
   colorWeak: false,
-  title: 'Oceania ERP',
+  title: 'ReactTS Demo ERP',
   pwa: true,
   logo: 'https://sso.oceania-sh.com/erp/static/img/OceaniaLOGO-small.8101544.png',
   iconfontUrl: '',

@@ -1,4 +1,4 @@
-import { AvatarDropdown, AvatarName, Question, SelectLang } from '@/components';
+import { AvatarDropdown, AvatarName, HeaderMenu, Question, SelectLang } from '@/components';
 import { currentUser as queryCurrentUser } from '@/services/ant-design-pro/api';
 import { LinkOutlined } from '@ant-design/icons';
 import type { Settings as LayoutSettings } from '@ant-design/pro-components';
@@ -53,12 +53,11 @@ export async function getInitialState(): Promise<{
 // TODO 框架顶部重构区域
 export const layout: RunTimeLayoutConfig = ({ initialState }) => {
   return {
-    actions2Render: () => {
-      <>
-        <h1>12313</h1>
-      </>;
-    },
-    actionsRender: () => [<Question key="doc" />, <SelectLang key="SelectLang" />],
+    actionsRender: () => [
+      <Question key="doc" />,
+      <Question key="doc" />,
+      <SelectLang key="SelectLang" />,
+    ],
     avatarProps: {
       src: initialState?.currentUser?.avatar,
       title: <AvatarName />,
@@ -66,8 +65,10 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
         return <AvatarDropdown>{avatarChildren}</AvatarDropdown>;
       },
     },
+    // 水印透传，赋予水印对应内容信息(水印展示标准：依据阿里系默认约定，水印展示在主体内容区域)
     waterMarkProps: {
       content: initialState?.currentUser?.name,
+      // image: "https://sso.oceania-sh.com/static/img/OceaniaLOGO-1.91fadb4.png"// 对于特殊情况下用户名不存在，此时展示对应公司图标 Oceania
     },
     // footerRender: () => <Footer />,
     onPageChange: () => {
@@ -114,6 +115,12 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
       return <>{children}</>;
     },
     ...initialState?.settings,
+    logo: () => [
+      <>
+        {/* 这里不用headerTitleRender  用作UI简单处理 */}
+        <HeaderMenu></HeaderMenu>
+      </>,
+    ],
   };
 };
 
@@ -131,4 +138,11 @@ export const request = {
   baseURL: requestConfig[UMI_APP_SERVER as keyof typeof requestConfig].baseURL,
   // 异常拦截器（）
   ...errorConfig,
+};
+
+/**
+ * 微服务配置
+ */
+export const qiankun = {
+  apps: requestConfig[UMI_APP_SERVER as keyof typeof requestConfig].appConfig,
 };

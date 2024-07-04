@@ -18,4 +18,12 @@ export default {
   notificationConfig: <ServerConfig.NotificationAlert>{
     maxCount: 3,
   },
+  // 微服务信息
+  appConfig: <ServerConfig.MicrosoftApps>[
+    // SCP 商品中心
+    {
+      name: 'scp-product',
+      entry: '//product-test.oceaniasoft.com',
+    },
+  ],
 };
